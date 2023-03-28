@@ -19,9 +19,10 @@ class AccountFactory extends Factory
     {
 
         return [
-            'username'  => $this->faker->userName(),
+            'email'  => $this->faker->userName(),
             'password'  => $this->faker->password(),
             'is_active' => $this->faker->boolean(),
+            'verify' => $this->faker->boolean(),
         ];
     }
 }

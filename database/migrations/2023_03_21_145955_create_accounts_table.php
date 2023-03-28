@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('accounts', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('username',50);
+            $table->string('email',255);
             $table->string('password',255);
             $table->boolean('is_active')->default(true);
+            $table->boolean('verify')->default(false);
             $table->timestamps();
 
         });

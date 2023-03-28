@@ -30,3 +30,6 @@ Route::controller(\App\Http\Controllers\AccountController::class)->group(functio
    Route::get('account','index');
    Route::post('account','store');
 });
+
+Route::post('register',[\App\Http\Controllers\AuthController::class,'register']);
+Route::post('verify',[\App\Http\Controllers\VerificationController::class,'verifyOtp']);

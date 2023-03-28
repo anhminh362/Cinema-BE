@@ -33,10 +33,4 @@ class UserController extends Controller
             'user'=>$user
         ],200);
     }
-
-    protected function store(Request $request){
-        return User::create($request->all());
-    }
-
-
 }
